@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rda_silva <ricardojustino@fastmail.com>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 20:52:16 by rda_silva         #+#    #+#             */
-/*   Updated: 2022/02/19 11:25:37 by rda_silva        ###   ########.fr       */
+/*   Updated: 2022/02/19 15:35:49 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_mount_line(char	*src, int	fd)
+char	*ft_mount_line(char *src, int fd)
 {
 	char	*buffer;
 	int		str_len;
@@ -39,7 +39,7 @@ char	*ft_mount_line(char	*src, int	fd)
 	return (src);
 }
 
-char	*get_next_line(int	fd)
+char	*get_next_line(int fd)
 {
 	char		*line;
 	static char	*saved_content;

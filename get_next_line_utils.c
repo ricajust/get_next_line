@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rda_silva <ricardojustino@fastmail.com>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 00:07:27 by rda_silva         #+#    #+#             */
-/*   Updated: 2022/02/19 11:30:04 by rda_silva        ###   ########.fr       */
+/*   Updated: 2022/02/19 15:35:11 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ char	*ft_strjoin(char *str_1, char *str_2)
 	free(str_1);
 	str_3[i] = '\0';
 	return (str_3);
-
 }
 
 char	*ft_strchr(char *src, int c)
