@@ -6,13 +6,13 @@
 /*   By: rda_silva <ricardojustino@fastmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 20:52:16 by rda_silva         #+#    #+#             */
-/*   Updated: 2022/02/19 10:08:36 by rda_silva        ###   ########.fr       */
+/*   Updated: 2022/02/19 11:25:37 by rda_silva        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_mount_line(char *src, int fd) //#, 3
+char	*ft_mount_line(char	*src, int	fd)
 {
 	char	*buffer;
 	int		str_len;
@@ -39,22 +39,22 @@ char	*ft_mount_line(char *src, int fd) //#, 3
 	return (src);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line(int	fd)
 {
 	char		*line;
-	static char	*saved_line;
+	static char	*saved_content;
 
 	line = NULL;
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
-	saved_line = ft_mount_line(saved_line, fd);
-	if (saved_line == NULL)
+	saved_content = ft_mount_line(saved_content, fd);
+	if (saved_content == NULL)
 		return (NULL);
-	line = ft_read_line(saved_line);
-	saved_line = ft_save_line(saved_line);
+	line = ft_read_line(saved_content);
+	saved_content = ft_save_rest(saved_content);
 	if (line[0] == '\0')
 	{
-		free(saved_line);
+		free(saved_content);
 		free(line);
 		return (NULL);
 	}

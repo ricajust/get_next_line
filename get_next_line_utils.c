@@ -6,7 +6,7 @@
 /*   By: rda_silva <ricardojustino@fastmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 00:07:27 by rda_silva         #+#    #+#             */
-/*   Updated: 2022/02/19 10:58:05 by rda_silva        ###   ########.fr       */
+/*   Updated: 2022/02/19 11:30:04 by rda_silva        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strjoin(char *str_1, char *str_2) // #, H000
+char	*ft_strjoin(char *str_1, char *str_2)
 {
 	char	*str_3;
 	size_t	len_1;
@@ -51,7 +51,7 @@ char	*ft_strjoin(char *str_1, char *str_2) // #, H000
 
 }
 
-char	*ft_strchr(char *src, int c) // #, 10 = '\n'
+char	*ft_strchr(char *src, int c)
 {
 	size_t	i;
 
@@ -94,7 +94,7 @@ char	*ft_read_line(char *src)
 	return (str);
 }
 
-char	*ft_save_line(char *src)
+char	*ft_save_rest(char *src)
 {
 	size_t	i;
 	size_t	j;
